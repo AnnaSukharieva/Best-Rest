@@ -1,0 +1,109 @@
+.select {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+ 
+  &.is-active &__body {
+    display: block;
+    max-height: 140px;
+  }
+  &.is-active {
+    transition: all 0.3s;
+    .select__header {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid $main-green;
+    }
+    & ~ label {
+      top: 22%;
+      font-size: 11px;
+      color: $main-green;
+    }
+  }
+  &.filled {
+    transition: all 0.3s;
+    .select__header {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid $main-light;
+      &:hover {
+        border: 1px solid $main-green;
+      }
+    }
+    & ~ label {
+      top: 22%;
+      font-size: 11px;
+      color: $main-green;
+    }
+  }
+  &-container {
+    position: relative;
+    width: 100%;
+    height: 56px;
+    display: inline-block;
+    label {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50px;
+      font-size: 19px;
+      color: $main-light;
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+  }
+
+  &__header {
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    img {
+      padding: 0 16px;
+    }
+    &:hover {
+      border: 1px solid $main-green;
+    }
+  }
+  &__icon {
+    align-items: center;
+    transform: rotate(180deg);
+    display: flex;
+    height: 45px;
+    margin-left: auto;
+    width: 45px;
+    transition: all 0.3s;
+    &-opened {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__body {
+    transition: all 0.3s;
+    max-height: 0;
+    overflow: hidden;
+    background-color: $main-light;
+    border-radius: 5px;
+    z-index: 10;
+    border-top: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    overflow: auto;
+  }
+  &__item {
+    cursor: pointer;
+    font-size: 15px;
+    color: $light-grey;
+    padding: 8px 0 8px 23px;
+    transition: all 0.3s;
+
+  }
+  &__item:hover {
+    color: $dark-grey;
+    padding-left: 32px;
+  }
+}

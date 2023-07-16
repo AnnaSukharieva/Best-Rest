@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Best Rest</title>
+	<link rel="stylesheet" type="text/css" href="css/style.min.css" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="content">
+			<header>
+				<img src="icons/logo.svg" alt="logo">
+				<div class="tagline"> <span>Sign Up</span> and find the best place to rest while traveling </div>
+			</header>
+			<form id="form">
+				<div class="input-container form-item">
+					<input type="text" name="fname" required="" autocomplete="off" />
+					<label>First Name</label>
+					<div class="error-label hidden" id="fname-error"> </div>
+					<div class="img-wrapper">
+						<img src="icons/user.svg" alt="user icon">
+					</div>
+				</div>
+				<div class="input-container form-item">
+					<input type="text" name="sname" required="" autocomplete="off" />
+					<label>Second Name</label>
+					<div class="error-label hidden" id="sname-error"></div>
+					<div class="img-wrapper">
+						<img src="icons/users.svg" alt="users icon">
+					</div>
+				</div>
+				<div class="select-container form-item">
+					<div class="select">
+						<div class="select__header">
+							<img src="icons/map-marker.svg" alt="map marker">
+							<input readonly class="select__current" name="country" ></input>
+							<div class="select__icon"><img src="./icons/arrow.svg" alt=">"></div>
+						</div>
+						<div class="error-label hidden" id="country-error"></div>
+
+						<div class="select__body">
+							<!-- страны с джейсона -->
+						</div>
+					</div>
+					<label>Country</label>
+				</div>
+				<div class="input-container form-item">
+					<input type="tel" id="phone" name="phone" readonly required="" autocomplete="off" />
+					<label>Phone</label>
+					<div class="error-label hidden" id="phone-error"></div>
+					<div class="img-wrapper">
+						<img src="icons/phone.svg" alt="phone icon">
+					</div>
+				</div>
+				<div class="input-container form-item">
+					<input type="password" name="password" id="password" required="" autocomplete="off" />
+					<label>Password</label>
+					<div class="error-label hidden" id="password-error"> </div>
+					<div class="img-wrapper">
+						<img src="icons/padlock.svg" alt="map marker">
+					</div>
+				</div>
+				<div class="input-container form-item">
+					<input type="password" name="confirmedpassword" required="" autocomplete="off" />
+					<label>Confirm password</label>
+					<div class="error-label hidden" id="confirmedpassword-error"></div>
+					<div class="img-wrapper">
+						<img src="icons/padlocks.svg" alt="padlocks">
+					</div>
+				</div>
+				<div class="input-container form-item">
+					<input type="text" name="email" required="" autocomplete="off" />
+					<label>Email</label>
+					<div class="error-label hidden" id="email-error"> </div>
+					<div class="img-wrapper">
+						<img src="icons/email.svg" alt="email">
+					</div>
+				</div>
+				<div class="terms form-item">
+					<label>
+						<input type="checkbox" name="checkbox" required="" />
+						<span>I agree to the <a href="#"> Terms & Conditions</a></span>
+					</label>
+				</div>
+				<div class="button">
+					<input type="submit" value="Sign Up" id="submit" />
+				</div>
+			</form>
+		</div>
+		<footer>
+			If you have an account, <a href="#"> Log In </a>
+		</footer>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script type="module" src="js/index.js"></script>
+	<script type="module" src="js/validation.js"></script>
+
+</body>
+
+</html>

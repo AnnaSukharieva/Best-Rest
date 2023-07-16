@@ -1,0 +1,35 @@
+footer {
+  font-size: 18px;
+  padding-bottom: 30px;
+  text-align: center;
+  a {
+    color: $main-green;
+    text-underline-offset: 5px;
+    transition: all 0.3s;
+    &:hover {
+      text-decoration-color: $main-light;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+    &,
+    a {
+      font-size: 15px;
+    }
+    overflow: hidden;
+    padding: 60px 0 56px 0;
+    position: relative;
+    &::after {
+      position: absolute;
+      content: "";
+      width: 107px;
+      height: 107px;
+      background-image: url("../icons/bottom_right_decor.svg");
+      background-size: cover; /* или другие свойства background для настройки размеров и положения изображения */
+      bottom: -20px;
+      right: -35px;
+    }
+  }
+}

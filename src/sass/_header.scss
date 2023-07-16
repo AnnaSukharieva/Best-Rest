@@ -1,0 +1,57 @@
+header {
+  img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .tagline {
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 55px;
+    text-align: center;
+    span {
+      font-weight: 500;
+      font-size: 24px;
+      color: $main-green;
+    }
+  }
+}
+@media (max-width: 767px) {
+  header {
+    position: relative;
+    width: 100%;
+    z-index: 5;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 114px;
+      height: 91px;
+      background-image: url("../icons/top_right_decor.svg");
+      background-size: cover; /* или другие свойства background для настройки размеров и положения изображения */
+      top: 5px;
+      right: -32px;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      width: 60px;
+      height: 84px;
+      background-image: url("../icons/top_left_decor.svg");
+      background-size: cover; /* или другие свойства background для настройки размеров и положения изображения */
+      top: 117px;
+      left: -18px;
+    }
+    img {
+      display: none;
+    }
+    .tagline {
+      // padding-top: 5px;
+      margin: 100px 30px 30px 15px;
+      &,
+      span {
+        font-size: 19px;
+        text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+* {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+  font-size: 19px;
+  margin: 0;
+  padding: 0;
+  color: $main-light;
+}
+
+input {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.content {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+}
+

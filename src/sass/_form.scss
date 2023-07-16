@@ -1,0 +1,14 @@
+form {
+  max-width: 630px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 767px) {
+  form {
+    margin: 0 15px;
+    grid-template-columns: 1fr;
+  }
+}
